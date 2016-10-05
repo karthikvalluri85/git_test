@@ -1,1 +1,64 @@
 Test get start demo
+==========================
+1. First check the git version git version to see if GIT is isnatlle dor not
+2. Enter ur name and email in git
+karthik@karthikvalluri:~/git_test$ git config --global user.name "karthikvalluri85"
+karthik@karthikvalluri:~/git_test$ git config --global user.name "karthikvalluri@gmail.com"
+3. To see contents git config --global --list
+4. To see status git status
+5. Create a text file in git and push it to remote ie github
+=====================================================================
+>> karthik@karthikvalluri:~/git_test/git_test$ ls
+README.md
+karthik@karthikvalluri:~/git_test/git_test$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+karthik@karthikvalluri:~/git_test/git_test$ echo "Test get start demo" >>start.txt
+karthik@karthikvalluri:~/git_test/git_test$ ls
+README.md  start.txt
+karthik@karthikvalluri:~/git_test/git_test$ cat start.txt
+Test get start demo
+karthik@karthikvalluri:~/git_test/git_test$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	start.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+karthik@karthikvalluri:~/git_test/git_test$ git add start.txt
+karthik@karthikvalluri:~/git_test/git_test$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   start.txt
+
+karthik@karthikvalluri:~/git_test/git_test$ git commit -m "first commit"
+[master 652c6d9] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 start.txt
+karthik@karthikvalluri:~/git_test/git_test$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working directory clean
+karthik@karthikvalluri:~/git_test/git_test$ git push origin master
+Username for 'https://github.com': karthikvalluri85
+Password for 'https://karthikvalluri85@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 295 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/karthikvalluri85/git_test.git
+   1b91c15..652c6d9  master -> master
+karthik@karthikvalluri:~/git_test/git_test$ git push origin master
+=============================================================================
